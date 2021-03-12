@@ -245,10 +245,17 @@ namespace Column {
          */
         public mask: string;
 
+        // eslint-disable-next-line
+        constructor(config: any, extraConfig: any) {
+            super(config);
+            this.mask = extraConfig.mask;
+        }
+
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         public getProviderConfig(): any {
             const config = super.getProviderConfig();
 
+            config.mask = this.mask;
             //Mask and format can't have different values
             //Assuming a mask was defined, it should override format
             if (this.mask && this.mask !== this.format) {
