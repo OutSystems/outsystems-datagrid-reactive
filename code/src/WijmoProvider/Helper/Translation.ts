@@ -6,6 +6,7 @@ namespace WijmoProvider.Helper.Translation {
         switch (language) {
             //the following languages exist in these variants
             case 'ar-AE':
+            case 'ar-SA':
             case 'de-CH':
             case 'en-CA':
             case 'de-GB':
