@@ -1,64 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3148EB34-DA22-4F72-8E53-26D03A0EC8FA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>OutSystems.NssDataGridDataConvert</RootNamespace>
     <AssemblyName>OutSystems.NssDataGridDataConvert</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
     <DocumentationFile>OutSystems.NssDataGridDataConvert.xml</DocumentationFile>
-    <DebugSymbols>false</DebugSymbols>
     <NoWarn>1591;1587</NoWarn>
-    <Optimize>true</Optimize>
-    <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
-    <ErrorReport>prompt</ErrorReport>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DocumentationFile>OutSystems.NssDataGridDataConvert.xml</DocumentationFile>
-    <DebugSymbols>true</DebugSymbols>
     <NoWarn>1591;1587</NoWarn>
-    <Optimize>false</Optimize>
-    <WarningLevel>4</WarningLevel>
-    <DebugType>full</DebugType>
-    <ErrorReport>prompt</ErrorReport>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files\OutSystems\Development Environment 11\Integration Studio\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System">
+    <Reference Update="System">
       <Name>System</Name>
     </Reference>
-    <Reference Include="System.Core">
+    <Reference Update="System.Core">
       <Name>System.Core</Name>
     </Reference>
-    <Reference Include="System.Drawing">
+    <Reference Update="System.Drawing">
       <Name>System.Drawing</Name>
     </Reference>
-    <Reference Include="System.Data">
+    <Reference Update="System.Data">
       <Name>System.Data</Name>
     </Reference>
-    <Reference Include="System.Web">
-      <Name>System.Web</Name>
-    </Reference>
-    <Reference Include="System.Xml">
+    <Reference Update="System.Xml">
       <Name>System.XML</Name>
     </Reference>
-    <Reference Include="System.Xml.Linq">
+    <Reference Update="System.Xml.Linq">
       <Name>System.Xml.Linq</Name>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files\OutSystems\Development Environment 11\Integration Studio\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="OutSystems.RuntimeCommon">
       <Name>OutSystems.RuntimeCommon</Name>
@@ -85,20 +71,16 @@
       <HintPath>bin\OutSystems.SOAP.API.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <!-- DO NOT REMOVE THIS COMMENT: ADD_NEW_PROJECT -->
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ObtainMetadata.cs" />
-    <Compile Include="temp_ardoJSON.cs" />
     <Compile Include="DataGridDataConvert.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Interface.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ObtainMetadata.cs" />
     <Compile Include="Structures.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -111,6 +93,27 @@
     <Compile Include="RecordLists.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="temp_ardoJSON.cs" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <Name>System.Core</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Name>System.Xml.Linq</Name>
+    </Reference>
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

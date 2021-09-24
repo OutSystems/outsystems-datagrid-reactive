@@ -19,14 +19,6 @@
             <param name="ssData">List or record to get meta data from.</param>
             <param name="ssDataJSON">JSON with the data for the data grid</param>
         </member>
-        <member name="M:OutSystems.NssDataGridDataConvert.IssDataGridDataConvert.MssConvertData2JSON_deprecated(System.Object,System.String@,System.String@)">
-            <summary>
-            DEPRECATED - c
-            </summary>
-            <param name="ssData">List or record to get meta data from.</param>
-            <param name="ssDataJSON">JSON with the data for the data grid</param>
-            <param name="ssDataMetadata">JSON with the structure of the object passed.</param>
-        </member>
         <member name="M:OutSystems.NssDataGridDataConvert.IssDataGridDataConvert.MssConvertData2JSON(System.Object,System.String@)">
             <summary>
             Prepares your data to be used in the Data Grid.
