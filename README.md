@@ -39,7 +39,7 @@ We highly recommend the usage of the following tools:
 ### How to use change this code?
 1. Create a branch based in the branch **master** (lastest & greatest release)
 2. Open your Visual Code in your branch
-3. Run the following command in Visual Code terminal: `npm install` (this will install all the dependencies that you need)
+3. Run the following command in Visual Code terminal: `npm run setup` (this will install all the dependencies that you need and compile the code)
 4. Do your magic! :)
 5. **Document your code** (with the extension "Document This", start typing `/**` and the extension will give you a good starting point
 6. Compile and fix errors and warnings (in Visual Code terminal: `npm run build`)
