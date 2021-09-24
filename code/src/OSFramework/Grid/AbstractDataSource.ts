@@ -131,7 +131,10 @@ namespace OSFramework.Grid {
 
         // set primary key field of dataItem
         private _setKeyBinding(data): any {
-            _.set(data, this.parentGrid.config.keyBinding, this._counter--);
+            // we only want to do this if we have key binding set
+            if (this.parentGrid.config.keyBinding) {
+                _.set(data, this.parentGrid.config.keyBinding, this._counter--);
+            }
         }
 
         // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
